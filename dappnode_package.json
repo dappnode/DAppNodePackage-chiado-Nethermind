@@ -1,0 +1,49 @@
+{
+    "name": "chiado-nethermind.dnp.dappnode.eth",
+    "version": "1.0.0",
+    "upstreamVersion": "1.13.6",
+    "shortDescription": "Nethermind Chiado client",
+    "description": "Nethermind - The world’s fastest Ethereum .NET Client and P2P Data Marketplace for the decentralised future\nOur flagship .NET Core-based Ethereum client is all about performance and flexibility. We have built a lean, stable and feature-rich gateway to allow anyone, anywhere, to take part in the decentralised future.",
+    "type": "service",
+    "architectures": ["linux/amd64", "linux/arm64"],
+    "dependencies": {},
+    "chain": "ethereum",
+    "author": "DAppNode Association <admin@dappnode.io> (https://github.com/dappnode)",
+    "contributors": [
+      "Eduardo Antuña <eduadiez@gmail.com> (https://github.com/eduadiez)",
+      "Tropicar <tropicar@dappnode.io> (https://github.com/tropicar)"
+    ],
+    "exposable": [
+      {
+        "name": "Nethermind JSON RPC",
+        "description": "JSON RPC endpoint for Nethermind Chiado testnet",
+        "serviceName": "nethermind",
+        "port": 8545
+      },
+      {
+        "name": "Nethermind JSON RPC (WS)",
+        "description": "JSON RPC WebSocket endpoint for Nethermind Chiado testnet",
+        "serviceName": "nethermind",
+        "port": 8546
+      }
+    ],
+    "upstreamRepo": "NethermindEth/nethermind",
+    "upstreamArg": "UPSTREAM_VERSION",
+    "categories": ["Blockchain"],
+    "links": {
+      "endpoint": "http://nethermind-chiado.dnp.dappnode:8545",
+      "API engine endpoint":"http://nethermind-chiado.dnp.dappnode:8551",
+      "homepage": "https://github.com/dappnode/DAppNodePackage-nethermind#readme"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/dappnode/DAppNodePackage-Chiado-Nethermind.git"
+    },
+    "requirements": {
+      "minimumDappnodeVersion": "0.2.56"
+    },
+    "bugs": {
+      "url": "https://github.com/dappnode/DAppNodePackage-Chiado-Nethermind/issues"
+    },
+    "license": "LGPL-3.0"
+  }
