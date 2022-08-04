@@ -1,0 +1,37 @@
+version: "3.5"
+services:
+  nethermind:
+    build:
+      context: .
+      args:
+        UPSTREAM_VERSION: 1.13.6
+    image: "nethermind.chiado-nethermind.dnp.dappnode.eth:1.0.9"
+    restart: unless-stopped
+    security_opt:
+      - "seccomp:unconfined"
+    volumes:
+      - "data:/data"
+    environment:
+      MODE: normal
+      NETHERMIND_SYNCCONFIG_FASTSYNC: "true"
+      NETHERMIND_JSONRPCCONFIG_ENABLED: "true"
+      NETHERMIND_JSONRPCCONFIG_HOST: 0.0.0.0
+      NETHERMIND_INITCONFIG_WEBSOCKETSENABLED: "true"
+      NETHERMIND_NETWORKCONFIG_DISCOVERYPORT: 31309
+      NETHERMIND_NETWORKCONFIG_P2PPORT: 31309
+      NETHERMIND_JSONRPCCONFIG_ADDITIONALRPCURLS: "http://0.0.0.0:8551|http;ws|net;eth;subscribe;engine;web3;client"
+      LOG: INFO
+      EXTRA_OPTS: ""
+    ports:
+      - "31309:31309/udp"
+      - "31309:31309/tcp"
+    ulimits:
+      nofile:
+        soft: 1000000
+        hard: 1000000
+    deploy:
+      resources:
+        limits:
+          memory: 16384M
+volumes:
+  data: {}
