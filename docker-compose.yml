@@ -5,7 +5,7 @@ services:
       context: .
       args:
         UPSTREAM_VERSION: 1.13.6
-    image: "nethermind.chiado-nethermind.dnp.dappnode.eth:1.0.9"
+    image: "nethermind.chiado-nethermind.dnp.dappnode.eth:1.0.0"
     restart: unless-stopped
     security_opt:
       - "seccomp:unconfined"
