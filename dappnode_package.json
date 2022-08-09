@@ -31,8 +31,8 @@
     "upstreamArg": "UPSTREAM_VERSION",
     "categories": ["Blockchain"],
     "links": {
-      "endpoint": "http://nethermind-chiado.dnp.dappnode:8545",
-      "API engine endpoint":"http://nethermind-chiado.dnp.dappnode:8551",
+      "endpoint": "http://chiado-nethermind.dappnode:8545",
+      "API engine endpoint":"http://chiado-nethermind.dappnode:8551",
       "homepage": "https://github.com/dappnode/DAppNodePackage-nethermind#readme"
     },
     "repository": {
