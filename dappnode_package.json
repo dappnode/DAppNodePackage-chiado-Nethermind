@@ -15,13 +15,13 @@
     ],
     "exposable": [
       {
-        "name": "Nethermind JSON RPC",
+        "name": "Nethermind Chiado JSON RPC",
         "description": "JSON RPC endpoint for Nethermind Chiado testnet",
         "serviceName": "nethermind",
         "port": 8545
       },
       {
-        "name": "Nethermind JSON RPC (WS)",
+        "name": "Nethermind Chiado JSON RPC (WS)",
         "description": "JSON RPC WebSocket endpoint for Nethermind Chiado testnet",
         "serviceName": "nethermind",
         "port": 8546
