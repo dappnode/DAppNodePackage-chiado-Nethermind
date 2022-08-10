@@ -1,6 +1,6 @@
-## Goerli Geth (Execution Client)
+## Nethermind Gnosis Chain Chiado (Testnet Execution Client)
 
-Goerli is now ready for the merge!
+Chiado is now ready for the merge!
 
 There are now two RPC APIs in Execution Clients:
 
