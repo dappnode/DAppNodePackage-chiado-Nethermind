@@ -1,10 +1,10 @@
 ARG UPSTREAM_VERSION
-FROM debian:buster-slim as binary
+FROM debian:bullseye-slim as binary
 
 RUN DEBIAN_FRONTEND=noninteractive \
     apt update && apt install --assume-yes --no-install-recommends wget ca-certificates && \
-    wget -q https://raw.githubusercontent.com/gnosischain/nethermind-client/main/chiado/nethermind_config.cfg -O /usr/config.cfg && \
-    wget -q https://raw.githubusercontent.com/gnosischain/nethermind-client/main/chiado/nethermind_genesis.json -O /usr/genesis.json
+    wget -q https://raw.githubusercontent.com/gnosischain/configs/main/chiado/nethermind.cfg -O /usr/config.cfg && \
+    wget -q https://raw.githubusercontent.com/gnosischain/configs/main/chiado/genesis.json -O /usr/genesis.json
 
 
 
