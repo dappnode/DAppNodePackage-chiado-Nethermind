@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "upstreamVersion": "1.13.6",
     "shortDescription": "Nethermind Chiado client",
-    "description": "Chiado Nethermind is a execution layer (EL) client for running the Gnosis longterm testnet `Chiado`, Nethermind is a high-performance, highly configurable full Ethereum protocol client built on .NET that runs on Linux, Windows, and macOS, and supports Clique, Aura, Ethash, and Proof-of-Stake consensus algorithms.",
+    "description": "Chiado Nethermind is an Execution Layer (EL) client for running the Gnosis longterm testnet `Chiado`, Nethermind is a high-performance, highly configurable full Ethereum protocol client built on .NET that runs on Linux, Windows, and macOS, and supports Clique, Aura, Ethash, and Proof-of-Stake consensus algorithms.",
     "type": "service",
     "architectures": ["linux/amd64"],
     "dependencies": {},
