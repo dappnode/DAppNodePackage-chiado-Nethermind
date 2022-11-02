@@ -4,7 +4,7 @@ services:
     build:
       context: .
       args:
-        UPSTREAM_VERSION: 1.13.6
+        UPSTREAM_VERSION: 1.14.5
     image: "nethermind.chiado-nethermind.dnp.dappnode.eth:1.0.0"
     restart: unless-stopped
     security_opt:
@@ -13,18 +13,20 @@ services:
       - "data:/data"
     environment:
       MODE: normal
+      NETHERMIND_CONFIG: chiado
       NETHERMIND_SYNCCONFIG_FASTSYNC: "true"
       NETHERMIND_JSONRPCCONFIG_ENABLED: "true"
       NETHERMIND_JSONRPCCONFIG_HOST: 0.0.0.0
       NETHERMIND_INITCONFIG_WEBSOCKETSENABLED: "true"
-      NETHERMIND_NETWORKCONFIG_DISCOVERYPORT: 31309
-      NETHERMIND_NETWORKCONFIG_P2PPORT: 31309
-      NETHERMIND_JSONRPCCONFIG_ADDITIONALRPCURLS: "http://0.0.0.0:8551|http;ws|net;eth;subscribe;engine;web3;client"
-      LOG: INFO
+      NETHERMIND_NETWORKCONFIG_DISCOVERYPORT: 32304
+      NETHERMIND_NETWORKCONFIG_P2PPORT: 32304
+      NETHERMIND_JSONRPCCONFIG_ENGINEHOST: 0.0.0.0
+      NETHERMIND_JSONRPCCONFIG_ENGINEPORT: 8551
+      NETHERMIND_HEALTHCHECKSCONFIG_UIENABLED: "true"
       EXTRA_OPTS: ""
     ports:
-      - "31309:31309/udp"
-      - "31309:31309/tcp"
+      - "32034:32034/udp"
+      - "32304:32304/tcp"
     ulimits:
       nofile:
         soft: 1000000
