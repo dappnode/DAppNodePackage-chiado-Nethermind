@@ -26,7 +26,7 @@ services:
       EXTRA_OPTS: ""
     ports:
       - "32034:32034/udp"
-      - "31309:31309/tcp"
+      - "32304:32304/tcp"
     ulimits:
       nofile:
         soft: 1000000
