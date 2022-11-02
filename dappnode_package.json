@@ -16,13 +16,13 @@
     "exposable": [
       {
         "name": "Nethermind Chiado JSON RPC",
-        "description": "JSON RPC endpoint for Nethermind Chiado testnet",
+        "description": "JSON RPC endpoint for Nethermind Gnosis Chiado testnet",
         "serviceName": "nethermind",
         "port": 8545
       },
       {
         "name": "Nethermind Chiado JSON RPC (WS)",
-        "description": "JSON RPC WebSocket endpoint for Nethermind Chiado testnet",
+        "description": "JSON RPC WebSocket endpoint for Nethermind Gnosis Chiado testnet",
         "serviceName": "nethermind",
         "port": 8546
       }
@@ -32,7 +32,7 @@
     "categories": ["Blockchain"],
     "links": {
       "endpoint": "http://chiado-nethermind.dappnode:8545",
-      "API engine endpoint":"http://chiado-nethermind.dappnode:8551",
+      "EngineAPI":"http://chiado-nethermind.dappnode:8551",
       "homepage": "https://github.com/dappnode/DAppNodePackage-nethermind#readme"
     },
     "repository": {
